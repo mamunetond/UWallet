@@ -20,4 +20,7 @@ from wallet import views as UWalet
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', UWalet.home),
+    path('addIncome', UWalet.income),
+    path('addCost', UWalet.cost),
+    
 ]
