@@ -1,0 +1,13 @@
+run server
+python manage.py runserver
+migrara models
+python manage.py migrate
+
+uwallet
+uwallet@serpremiumx.com
+123456
+
+
+Python 3.6.6 / Django 2.1.2 / Bootstrap 4.1
+Django -> Framework de desarrollo (Python)
+Bootstrap -> Framework de comportamiento y diseño (js, css)
