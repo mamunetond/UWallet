@@ -1,6 +1,7 @@
 run server
 python manage.py runserver
 migrara models
+python manage.py makemigrations wallet
 python manage.py migrate
 
 uwallet
@@ -11,3 +12,6 @@ uwallet@serpremiumx.com
 Python 3.6.6 / Django 2.1.2 / Bootstrap 4.1
 Django -> Framework de desarrollo (Python)
 Bootstrap -> Framework de comportamiento y diseño (js, css)
+git branch
+git checkout CamilaM
+git merge CamilaM
