@@ -1,0 +1,55 @@
+{% extends "./base.html" %} {% block title %} SPENTS {% endblock %} {% block body %}
+
+<div class="row">
+    <div class="co-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <h2>Register Spent</h2>
+        <div class="card">
+            <div class="card-body">
+                <form action="/registerspents/" method="POST">{% csrf_token %}
+                    <div class="form-group">
+                        <input type="int" name="intvalue_spent" class="form-control" placeholder="Value" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txttype_spent" class="form-control" placeholder="Type" minlength="6" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txtdetail_spent" class="form-control" placeholder="Detail" minlength="6" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="datedate_spent" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block" text-white>Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="co-sm-12 col-md-6 col-lg-8 col-xl-8">
+        <h1>spents List</h1>
+        <div class="table-responsive py-2">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Value</th>
+                        <th>Type</th>
+                        <th>Detail</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in spentslist %}
+                    <tr>
+                        <td>{{c.value_spent}}</td>
+                        <td>{{c.type_spent}}</td>
+                        <td>{{c.detail_spent}}</td>
+                        <td>{{c.date_spent}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

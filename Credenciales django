@@ -12,6 +12,13 @@ uwallet@serpremiumx.com
 Python 3.6.6 / Django 2.1.2 / Bootstrap 4.1
 Django -> Framework de desarrollo (Python)
 Bootstrap -> Framework de comportamiento y diseño (js, css)
-git branch
-git checkout CamilaM
+pa editar
+1git branch
+2git checkout CamilaM
+3git pull
+guardar
+git add *
+git commit -m "mensaje de que hice"
+git push
+
 git merge CamilaM
