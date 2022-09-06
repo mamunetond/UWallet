@@ -28,7 +28,8 @@ def spent_view(request):
 def registerspents(request):
     value_spent= request.POST['intvalue_spent']
     detail_spent= request.POST['txtdetail_spent']
+    type_spent= request.POST['txttype_spent']
     date_spent=request.POST['datedate_spent']
     
-    spent = Spent.objects.create(value_spent= value_spent, detail_spent= detail_spent, date_spent= date_spent)
+    spent = Spent.objects.create(value_spent= value_spent, type_spent= type_spent, detail_spent= detail_spent, date_spent= date_spent)
     return redirect('/spent/')
