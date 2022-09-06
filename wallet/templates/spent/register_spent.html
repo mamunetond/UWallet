@@ -35,6 +35,7 @@
                         <th>Type</th>
                         <th>Detail</th>
                         <th>Date</th>
+                        <th colspan="2">Options</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,6 +45,8 @@
                         <td>{{c.type_spent}}</td>
                         <td>{{c.detail_spent}}</td>
                         <td>{{c.date_spent}}</td>
+                        <td> <a href="editspent/{{c.id}}" class="btn btn-info">Edit</a></td>
+                        <td> <a href="deletespent/{{c.id}}" class="btn btn-danger">Delete</a></td>
                     </tr>
                     {% endfor %}
                 </tbody>

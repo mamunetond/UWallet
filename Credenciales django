@@ -1,6 +1,6 @@
 run server
 python manage.py runserver
-migrara models
+migrate models
 python manage.py makemigrations wallet
 python manage.py migrate
 
