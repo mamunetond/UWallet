@@ -2,8 +2,9 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .templates.income.Income import RegisterIncome
 from .models import Income
-def index(request):
-    return HttpResponse('HOME PAGE')
+
+def home(request):
+    return render(request, 'home/home.html')
 
 def income_view(request):
     incomes = Income.objects.all()
