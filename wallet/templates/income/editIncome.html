@@ -5,9 +5,9 @@
         <h2>Edit Income</h2>
         <div class="card">
             <div class="card-body">
-                <form action="/editarIncome/" method="POST">{% csrf_token %}
+                <form action="/editarincome/{{income.id}}" method="POST">{% csrf_token %}
                     <div class="form-group">
-                        <input type="int" name="intvalue_income" value="{{income.value_income}}" class="form-control" placeholder="Value" min="1" required>
+                        <input type="text" name="intvalue_income" value="{{income.value_income}}" class="form-control" placeholder="Value" min="1" required>
                     </div>
                     <div class="form-group">
                         <input type="text" name="txttype_income" value="{{income.type_income}}" class="form-control" placeholder="Type" minlength="6" required>

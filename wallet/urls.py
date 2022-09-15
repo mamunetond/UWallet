@@ -7,9 +7,11 @@ urlpatterns = [
     path('registerincomes/', views.registerincomes),
     path('income/deleteincome/<codigo>', views.deleteincome),
     path('income/editincome/<codigo>', views.editincome),
-    path('editarincome/', views.editarincome),
+    path('editarincome/<codigo>', views.editarincome),
     path('spent/', views.spent_view, name = 'register_spent'),
     path('registerspents/', views.registerspents),
-    path('spent/deletespent/<codigo>', views.deletespent)
+    path('spent/deletespent/<codigo>', views.deletespent),
+    path('spent/editspent/<codigo>', views.editspent),
+    path('editarspent/<codigo>', views.editarspent),
     
 ]
