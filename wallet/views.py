@@ -20,3 +20,9 @@ def registerincomes(request):
     
     income = Income.objects.create(value_income= value_income, type_income= type_income, detail_income= detail_income, date_income= date_income)
     return redirect('income/')
+
+def academy(request):
+    return render(request, 'academy/academy.html')
+
+def feed(request):
+    return render(request, 'feed/feed.html')
