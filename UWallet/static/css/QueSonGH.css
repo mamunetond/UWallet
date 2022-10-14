@@ -8,7 +8,7 @@
     font-size: 11px;
 }
 
-.body{
+body{
     background-color: #ffffff;
 }
 
@@ -73,6 +73,3 @@
     color: #1f2ce5;
     transform: scale(1.1);
 }
-
-
-

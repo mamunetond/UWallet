@@ -26,3 +26,22 @@ def academy(request):
 
 def feed(request):
     return render(request, 'feed/feed.html')
+
+def QueSonFP(request):
+    return render(request, 'academy/QueSonFP.html')
+
+def ObjetivosFP(request):
+    return render(request, 'academy/ObjetivosFP.html')
+
+def ElementosFP(request):
+    return render(request, 'academy/ElementosFP.html')
+
+def OptimizarFP(request):
+    return render(request, 'academy/OptimizarFP.html')
+
+def QueSonGH(request):
+    return render(request, 'academy/QueSonGH.html')
+
+
+
+
