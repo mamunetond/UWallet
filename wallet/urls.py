@@ -9,5 +9,10 @@ urlpatterns = [
     path('home/academy', views.academy),
     path('feed/', views.feed),
     path('home/feed', views.feed),
+    path('home/academy/QueSonFP', views.QueSonFP),
+    path('home/academy/ObjetivosFP', views.ObjetivosFP),
+    path('home/academy/ElementosFP', views.ElementosFP),
+    path('home/academy/OptimizarFP', views.OptimizarFP),
+    path('home/academy/QueSonGH', views.QueSonGH),
 
 ]
