@@ -36,7 +36,16 @@ body {
     margin: 35px 35px;
 }
 
-.reports{
+.reports {
+    background-color: #ff9500;
+    border: 0px;
+    padding: 60px;
+    color:#fff;
+    font-size: 40px;
+    margin: 35px 35px;
+}
+
+.notifications {
     background-color: #ff9500;
     border: 0px;
     padding: 60px;

@@ -118,6 +118,10 @@ def estadis (request):
         'labels' : labels,
         'data' : data
     })
+    
+def notifications(request):
+    return render(request, 'notifications/notifications.html')
+
 
 
 

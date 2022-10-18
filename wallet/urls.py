@@ -23,4 +23,6 @@ urlpatterns = [
     path('spent/editspent/<codigo>', views.editspent),
     path('editarspent/<codigo>', views.editarspent),
     path('estadis/', views.estadis, name = 'estadis'),
+    path('notifications',views.notifications),
+    path('feed/notifications',views.notifications),
 ]
