@@ -6,39 +6,41 @@
 
 body {
     background: #ebfffb;
-    font-family: Arial;
+
 }
 
-.contenedor {
-    max-width: 700px;
-    height: 100px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: left;
+.incomes {
+    background-color: green;
+    border: 0px;
+    padding: 60px;
+    color:#fff;
+    font-size: 40px;
+    margin: 35px 35px;
 }
 
-button {
-    width: 300px;
-    height: 300px;
-    background: #ff5858;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    padding: 30px;
-    color: #ebfffb;
-    font-size: 60px;
-    transition: .35 ease all;
-    margin-right: 100px;
+.spents {
+    background-color: red;
+    border: 0px;
+    padding: 60px;
+    color:#fff;
+    font-size: 40px;
+    margin: 35px 35px;
 }
 
-
-button:hover {
-    background: #ebfffb;
-    color: #ff5858;
-    box-shadow: 3px 3px 50px rgba(0, 0, 0,.15);
+.movements {
+    background-color: #ea00ff;
+    border: 0px;
+    padding: 60px;
+    color:#fff;
+    font-size: 40px;
+    margin: 35px 35px;
 }
 
-
-
-
+.reports{
+    background-color: #ff9500;
+    border: 0px;
+    padding: 60px;
+    color:#fff;
+    font-size: 40px;
+    margin: 35px 35px;
+}
