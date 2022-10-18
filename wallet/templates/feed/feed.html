@@ -9,32 +9,14 @@
     <!-- Bootstrap CSS -->
     <link type='text/css' href='{% static "css/feed.css" %}' rel='stylesheet'/>
     <script src="https://kit.fontawesome.com/bb4115f541.js" crossorigin="anonymous"></script>
-    <title>Home</title>
+    <title>Feed</title>
+
 </head>
 <body>
-    <div class="contenedor">
-      <button><i class="fa-duotone fa-money-bill"></i>Incomes</button>
-        <div class="contenedorSpents">
-          <button class="submit"><i class="fa-solid fa-credit-card"></i>Spents</button>
-            <div class="contenedorMovements">
-              <button><i class="fa-solid fa-arrow-down-arrow-up"></i>Movements</button>
-                <div class="contenedorReports">
-                  <button><i class="fa-solid fa-magnifying-glass"></i>Reports</button>
-                    <div class="contenedorSavingGoals">
-                      <button><i class="fa-sharp fa-solid fa-flag"></i>Saving goals</button>
-                        <div class="contenedorNotifications">
-                          <button><i class="fa-solid fa-bell-on"></i>Notifications</button>
-                            <div class="contenedorUser">
-                              <button type="button" class="btn btn link"><i class="fa-solid fa-user"></i>Mario Alejandro Muñetón Durango</button>
-                                <div class="contenedorBack">
-                                  <a class="btn" href="/home"><button><i class="fa-sharp fa-solid fa-arrow-left"></i>Back</button></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-               </div> 
-           </div> 
-      </div>
-  </div>
+    <a class="incomes" href="/income"><button><i class="fa-sharp fa-solid fa-money-bill"></i>Incomes</button></a>
+    <a class="spents"><button><i class="fa-solid fa-credit-card">Spents</button></a>
+    <a class="movements"><button><i class="fa-solid fa-arrow-down-arrow-up">Movements</button></a>
+    <a class="reports"><button><i class="fa-solid fa-magnifying-glass">Reports</button></a>
+    <a class="back" href="/home"><button><i class="fa-sharp fa-solid fa-arrow-left">Back</button>
 </body>
 </html>
