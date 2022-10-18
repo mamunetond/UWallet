@@ -78,3 +78,18 @@ def editarspent(request,codigo):
     spent.date_spent = date_spent
     spent.save()
     return redirect('/spent/')
+
+def estadis (request):
+    labels = []
+    data = []
+    queryset = Income.objects.order_by('-value_income')[:5]
+    for x in queryset:
+        labels.append(x.type_income)
+        data.append(x.value_income)
+        
+    print (labels)
+    print (data)
+    return render(request, 'estadis.html', {
+        'labels' : labels,
+        'data' : data
+    })
