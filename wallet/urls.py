@@ -1,5 +1,8 @@
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('home/', views.home),
@@ -25,4 +28,10 @@ urlpatterns = [
     path('estadis/', views.estadis, name = 'estadis'),
     path('notifications',views.notifications),
     path('feed/notifications',views.notifications),
-]
+    path('', views.welcome),
+    path('signin/',views.signin),
+    path('signout/',views.signout),
+    path('signup/',views.signup),
+]   
+
+
