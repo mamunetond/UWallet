@@ -1,8 +1,14 @@
+
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .templates.income.Income import RegisterIncome
 from .models import Income
 from .models import Spent
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate,login
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import logout
+from django.shortcuts import HttpResponseRedirect
 
 
 def home(request):
@@ -121,6 +127,58 @@ def estadis (request):
     
 def notifications(request):
     return render(request, 'notifications/notifications.html')
+
+def welcome(request):
+    return render(request, 'welcome/welcome.html')
+
+def login(request):
+    return render(request,'login/login.html')
+
+def signup(request):
+    if request.user.is_authenticated:
+        return redirect('/')
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            return redirect('/')
+        else:
+            return render(request, 'signup/signup.html', {'form': form})
+    else:
+        form = UserCreationForm()
+        return render(request, 'signup/signup.html', {'form': form})
+        
+    
+def signin(request):
+    if request.user.is_authenticated:
+        return render(request, 'welcome.html')
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('/home') #home
+        else:
+            msg = 'Error Login'
+            form = AuthenticationForm(request.POST)
+            return render(request, 'login/login.html', {'form': form, 'msg':msg})
+    else:
+        form = AuthenticationForm()
+        return render(request, 'login/login.html', {'form':form} )
+    
+
+def signout(request):
+    logout(request)
+    return redirect('/')
+
+
+            
+
 
 
 
