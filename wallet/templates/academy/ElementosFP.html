@@ -1,31 +1,68 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elementos de las Finanzas Personales</title>
-    <link rel="stylesheet" href= '{% static "css/ElementosFP.css" %}'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Academy</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href='{% static "css/bootstrap.css" %}'>
+    <link rel="stylesheet" href='{% static "css/font-awesome.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/owl.carousel.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/owl.theme.default.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/style.css" %}'>
+    <link rel="stylesheet" href='{% static "css/responsive.css" %}'>
 </head>
+
 <body>
-    <header class="header">
-        <nav>
-           <ul class="nav-links">
-             <li><a href="/home/academy/QueSonFP">¿Qué son las finanzas personales</a></li>      
-             <li><a href="/home/academy/ObjetivosFP">Objetivos de las finanzas personales</a></li>
-             <li><a href="/home/academy/ElementosFP">Elementos de las finazas personales</a></li>
-             <li><a href="/home/academy/OptimizarFP">¿Cómo optimizar mis finanzas personales</a></li>
-             <li><a href="/home/academy/QueSonGH">¿Qué son los gastos hormiga?</a></li>
-           </ul>            
-        </nav>
-        <a class="btn" href="/home"><button>Home</button></a>
-    </header>
-    <h1>Elementos de las Finanzas personales</h1>
-    <h1>Las finanzas personales cuentan con los siguientes elementos básicos<h1>
-    <h1>1. Ingresos: Son todos los recursos o entradas de los que se dispone. Por ejemplo, salarios, rentas de alquiler de piso o coche, ventas de bienes.</h1>
-    <h1>2. Gastos: Se refiere a las salidas o pago por distintos conceptos. Así, por ejemplo, arriendo, mercado, Ropa.<h1>
-    <h1>3. Activos: Bienes de larga duración con los que se dispone. Por ejemplo, tenemos propiedades, vehiculos</h1>
-    <h1>4. Pasivos: Deudas que mantenemos cpn terceros. Por ejemplo: Deuda con un banco o amigo.       
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="logo">
+                            <h2><a href="#">Academy</a></h2>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="menu">
+                            <ul>
+                                <li><a href="/home/academy/QueSonFP">¿Qué son las finanzas personales?</a></li>
+                                <li><a href="/home/academy/ObjetivosFP">Objetivos de las finanzas personales</a></li>
+                                <li><a href="/home/academy/ElementosFP">Elementos de las finazas personales</a></li>
+                                <li><a href="/home/academy/OptimizarFP">¿Cómo optimizar mis finanzas personales</a></li>
+                                <li><a href="/home/academy/QueSonGH">¿Qué son los gastos hormiga?</a></li>
+                                <li><a href="/home">Home </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="bg-text-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="bg-text">
+                            <h1>Elementos de las finanzas personales</h1>
+                            <h2>Las finanzas personales cuentan con los siguientes elementos básicos:<h2>
+                            <h2>1. Ingresos: Son todos los recursos o entradas de los que se dispone. Por ejemplo, salarios, rentas de alquiler de piso o coche, ventas de bienes.</h2>
+                            <h2>2. Gastos: Se refiere a las salidas o pago por distintos conceptos. Así, por ejemplo, arriendo, mercado, Ropa.<h2>
+                            <h2>3. Activos: Bienes de larga duración con los que se dispone. Por ejemplo, tenemos propiedades, vehiculos</h2>
+                            <h2>4. Pasivos: Deudas que mantenemos cpn terceros. Por ejemplo: Deuda con un banco o amigo.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/active.js"></script>
 </body>
+
 </html>
