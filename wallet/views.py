@@ -176,6 +176,14 @@ def signout(request):
     logout(request)
     return redirect('/')
 
+def advices(request):
+    return render(request,'advices/advices.html')
+
+def reminders(request):
+    return render(request,'reminders/reminders.html')
+
+def dues(request):
+    return render(request,'dues/dues.html')
 
             
 
