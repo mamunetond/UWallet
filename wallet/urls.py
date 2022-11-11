@@ -17,6 +17,10 @@ urlpatterns = [
     path('home/academy/ElementosFP', views.ElementosFP),
     path('home/academy/OptimizarFP', views.OptimizarFP),
     path('home/academy/QueSonGH', views.QueSonGH),
+    path('home/notifications',views.notifications),
+    path('home/notifications/advices',views.advices),
+    path('home/notifications/reminders',views.reminders),
+    path('home/notifications/dues',views.dues),
     path('spent/', views.spent_view, name = 'register_spent'),
     path('income/deleteincome/<codigo>', views.deleteincome),
     path('income/editincome/<codigo>', views.editincome),
@@ -32,6 +36,12 @@ urlpatterns = [
     path('signin/',views.signin),
     path('signout/',views.signout),
     path('signup/',views.signup),
+    path('advices/',views.advices),
+    path('reminders/',views.reminders),
+    path('dues/',views.dues),
+    path('notifications/advices/',views.advices),
+    path('notifications/reminders/',views.reminders),
+    path('notifications/dues/',views.dues),
 ]   
 
 
