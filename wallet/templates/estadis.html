@@ -6,21 +6,26 @@
 
 
 <body>
-    <canvas id="myChart" width="400" height="400"></canvas>
+    <div style="width: 400px">
+        <canvas id="myChart" width="200" height="200"></canvas></div>
     <script>
         const ctx = document.getElementById('myChart').getContext('2d');
         const myChart = new Chart(ctx, {
             type: 'pie',
             data: {
+                labels: {
+                    {
+                        labels | safe
+                    }
+                },
                 datasets: [{
-                    data: [10, 20, 30],
+                    data: {
+                        {
+                            spents
+                        }
+                    },
                     backgroundColor: ['red', 'orange', 'blue', 'yellow', 'green'],
-                }],
-                labels: [
-                    'Red',
-                    'Yellow',
-                    'Blue'
-                ]
+                }]
             },
             options: {
                 scales: {
