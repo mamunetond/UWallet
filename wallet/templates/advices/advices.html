@@ -1,7 +1,68 @@
 {% extends 'base_notifications/base_notifications.html' %}
-  
 {% block title %}Advices{% endblock %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+    </head>
+    {% block content %}
+    <style type="text/css" media="screen">
+      :root {
+          --color-green: #00a878;
+          --color-red: #fe5e41;
+          --color-button: #fdffff;
+          --color-black: #000;
+      }
+      .switch-button {
+          display: inline-block;
+      }
+      .switch-button .switch-button__checkbox {
+          display: none;
+      }
+      .switch-button .switch-button__label {
+          background-color: var(--color-red);
+          width: 5rem;
+          height: 3rem;
+          border-radius: 3rem;
+          display: inline-block;
+          position: relative;
+      }
+      .switch-button .switch-button__label:before {
+          transition: .2s;
+          display: block;
+          position: absolute;
+          width: 3rem;
+          height: 3rem;
+          background-color: var(--color-button);
+          content: '';
+          border-radius: 50%;
+          box-shadow: inset 0px 0px 0px 1px var(--color-black);
+      }
+      .switch-button .switch-button__checkbox:checked + .switch-button__label {
+          background-color: var(--color-green);
+      }
+      .switch-button .switch-button__checkbox:checked + .switch-button__label:before {
+          transform: translateX(2rem);
+      }
+    </style>
+        <h1 style="color:#5AF4FF">Advices <i class="fa-solid fa-wand-magic-sparkles"></i></h1>
+        <h2>Activated:</h2>
+        <div class="switch-button">
+            <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox">
+            <label for="switch-label" class="switch-button__label"></label>
+        </div>
+        <h2 for="frequency">Frequency:</h2>
+        <select name="frequency" id="frequency">
+        <option value="1 Day">1 Day</option>
+        <option value="3 Days">3 Days</option>
+        <option value="7 Days">7 Days</option>
+        <option value="2 Weeks">2 Weeks</option>
+        <option value="3 Weeks">3 Weeks</option>
+        <option value="1 Month">1 Month</option>
+        </select>
+    {% endblock %}
+</html>
+
   
-{% block content %}
-   <h2>Advices</h2>
-{% endblock %}
+  
