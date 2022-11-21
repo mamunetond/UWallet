@@ -42,6 +42,9 @@ urlpatterns = [
     path('notifications/advices/',views.advices),
     path('notifications/reminders/',views.reminders),
     path('notifications/dues/',views.dues),
+    path('feed/notifications/advices', views.advices),
+    path('feed/notifications/reminders', views.reminders),
+    path('feed/notifications/dues', views.dues),
 ]   
 
 
