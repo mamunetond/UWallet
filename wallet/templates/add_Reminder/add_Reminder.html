@@ -1,0 +1,25 @@
+{% extends 'base_notifications/base_notifications.html' %}
+
+{% block title %}Add Reminder{% endblock %}
+
+    
+   {% block content %}
+   
+    <h1 style="color:#FFFF00">Add Reminder <i class="fa-solid fa-circle-plus"></i></h1>
+    <h2>Tittle: <input type="text" name="Tittle"/></h2>
+    <h2>Deadline:</h2><input type="date" name="Deadline"/>
+    <h2 for="Remember me">Remember me:</h2>
+        <select name="frequency" id="frequency">
+        <option value="1 Day before">1 Day before</option>
+        <option value="3 Days before">3 Days before</option>
+        <option value="5 Days before">5 Days before</option>
+        <option value="7 Days before">7 Days before</option>
+        <option value="2 Weeks before">2 Weeks before</option>
+        <option value="3 Weeks before">3 Weeks before</option>
+        </select>
+    <h2>Description:</h2>
+    <textarea name="Description"></textarea>
+    <h2>Save changes:</h2>
+    <button type="button" class="btn btn-success">Save</button>
+   
+   {% endblock %}

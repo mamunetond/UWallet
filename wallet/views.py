@@ -185,6 +185,12 @@ def reminders(request):
 def dues(request):
     return render(request,'dues/dues.html')
 
+def add_Reminder(request):
+    return render(request, 'add_Reminder/add_Reminder.html')
+
+def see_Reminder(request):
+    return render(request, 'see_Reminder/see_Reminder.html')
+
             
 
 
