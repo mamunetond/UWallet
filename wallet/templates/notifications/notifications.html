@@ -1,1 +1,13 @@
-<h1>Aqui irán las notificaciones</h1>
+{% extends 'base_notifications/base_notifications.html' %}
+
+{% block title %}Notifications{% endblock %}
+
+    
+   {% block content %}
+   <a class="btn" href="/advices"><button type="button" class="btn btn-default" style="background-color:#5AF4FF;"><i class="fa-solid fa-wand-magic-sparkles" style="color:#FFFFFF"></i>Advices</button></a>
+   <a class="btn" href="/reminders"><button type="button" class="btn btn-default" style="background-color:#8A36D2;"><i class="fa-regular fa-calendar-days" style="color:#FFFFFF"></i>Reminders</button></a>
+   <a class="btn" href="/dues"><button type="button" class="btn btn-default" style="background-color:#FF00FF"><i class="fa-solid fa-calculator" style="color:#FFFFFF"></i>Dues</button></a>
+   
+   {% endblock %}
+
+   
