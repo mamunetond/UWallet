@@ -1,0 +1,26 @@
+{% extends "./base.html" %} {% block title %} Edit Goal {% endblock %} {% block body %}
+
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <h1>Edit Goal</h1>
+        <div class="card">
+            <div class="card-body">
+                <form action="/editargoal/{{goal.id}}" method="POST">{% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" name="txtname_goal" value="{{goal.name_goal}}" class="form-control" placeholder="Name of Goal" minlength="4" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="int" name="intvalue_goal" value="{{goal.value_goal}}" class="form-control" placeholder="Value of Goal" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="datedate_goal" value="{{goal.date_income}}" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block" text-white>Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

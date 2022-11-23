@@ -1,0 +1,44 @@
+{% extends "./base.html" %} {% block title %} SPENTS {% endblock %} {% block body %}
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+</head>
+
+
+<body>
+    <div style="width: 400px">
+        <canvas id="myChart" width="200" height="200"></canvas></div>
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: {
+                    {
+                        labels | safe
+                    }
+                },
+                datasets: [{
+                    data: {
+                        {
+                            data | safe
+                        }
+                    },
+                    backgroundColor: ['red', 'orange', 'blue', 'yellow', 'green'],
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
+{% endblock %}

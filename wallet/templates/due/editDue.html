@@ -1,0 +1,29 @@
+{% extends "./base.html" %} {% block title %} Edit Due {% endblock %} {% block body %}
+
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <h1>Edit Due</h1>
+        <div class="card">
+            <div class="card-body">
+                <form action="/editardue/{{due.id}}" method="POST">{% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" name="txtname_due" value="{{due.name_due}}" class="form-control" placeholder="Name of Due" minlength="4" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="int" name="intnumber_due" value="{{due.number_due}}" class="form-control" placeholder="Number of Dues" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="datedate_due" value="{{due.date_due}}" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txtdetail_due" value="{{due.detail_due}}" class="form-control" placeholder="Description of the Due" minlength="4" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block" text-white>Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

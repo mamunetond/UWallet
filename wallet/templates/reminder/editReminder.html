@@ -1,0 +1,29 @@
+{% extends "./base.html" %} {% block title %} Edit Due {% endblock %} {% block body %}
+
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <h1>Edit Reminder</h1>
+        <div class="card">
+            <div class="card-body">
+                <form action="/editarreminder/{{reminder.id}}" method="POST">{% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" name="txtname_reminder" value="{{reminder.name_reminder}}" class="form-control" placeholder="Name of Reminder" minlength="4" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="datedate_reminder" value="{{reminder.date_reminder}}" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="int" name="intremember_reminder" value="{{reminder.remember_reminder}}" class="form-control" placeholder="Remember me" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txtdetail_reminder" value="{{reminder.detail_reminder}}" class="form-control" placeholder="Detail of Reminder" minlength="4" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block" text-white>Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

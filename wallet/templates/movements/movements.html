@@ -1,0 +1,54 @@
+{% extends "./base.html" %} {% block title %} MOVEMENTS {% endblock %} {% block body %}
+<div class="row">
+    <div class="co-sm-12 col-md-4 col-lg-6 col-xl-6">
+        <h1>incomes List</h1>
+        <div class="table-responsive py-2">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Value</th>
+                        <th>Type</th>
+                        <th>Detail</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in incomes %}
+                    <tr>
+                        <td>{{c.value_income}}</td>
+                        <td>{{c.type_income}}</td>
+                        <td>{{c.detail_income}}</td>
+                        <td>{{c.date_income}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="co-sm-12 col-md-4 col-lg-6 col-xl-6">
+        <h1>spents List</h1>
+        <div class="table-responsive py-2">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Value</th>
+                        <th>Type</th>
+                        <th>Detail</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in spents %}
+                    <tr>
+                        <td>{{c.value_spent}}</td>
+                        <td>{{c.type_spent}}</td>
+                        <td>{{c.detail_spent}}</td>
+                        <td>{{c.date_spent}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<h2>BALANCE: </h2>{{balance}} {% endblock %}
