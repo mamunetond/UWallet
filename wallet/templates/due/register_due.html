@@ -1,0 +1,61 @@
+{% extends "./base.html" %} {% block title %} Goals {% endblock %} {% block body %}
+
+<script src="https://kit.fontawesome.com/bb4115f541.js" crossorigin="anonymous"></script>
+
+<div class="row">
+    <div class="co-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <h1 style="color:#FF00FF">Add a new Due <i class="fa-solid fa-calculator"></i></h1>
+        <div class="card">
+            <div class="card-body">
+                <form action="/registerdues/" method="POST">{% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" name="txtname_due" class="form-control" placeholder="Name of the Due" minlength="4" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="int" name="intnumber_due" class="form-control" placeholder="Number of Dues" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="datedate_due" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txtdetail_due" class="form-control" placeholder="Detail of the Due" minlength="4" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block" text-white>Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="co-sm-12 col-md-6 col-lg-8 col-xl-8">
+        <h1 style="color:#FF00FF">Your Dues</h1>
+        <div class="table-responsive py-2">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name of due</th>
+                        <th>Number of dues</th>
+                        <th>Date</th>
+                        <th>Detail of due</th>
+                        <th colspan="2">Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in yourdues %}
+                    <tr>
+                        <td>{{c.name_due}}</td>
+                        <td>{{c.number_due}}</td>
+                        <td>{{c.date_due}}</td>
+                        <td>{{c.detail_due}}</td>
+                        <td> <a href="editdue/{{c.id}}" class="btn btn-info">Edit</a></td>
+                        <td> <a href="deletedue/{{c.id}}" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

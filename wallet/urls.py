@@ -1,7 +1,8 @@
 from django.urls import path
 from . import views
 from django.conf import settings
-from django.conf.urls.static import static
+from django.contrib import admin
+
 
 
 urlpatterns = [
@@ -30,33 +31,39 @@ urlpatterns = [
     path('spent/editspent/<codigo>', views.editspent),
     path('editarspent/<codigo>', views.editarspent),
     path('estadis/', views.estadis, name = 'estadis'),
-    path('notifications',views.notifications),
+    path('notifications/',views.notifications),
     path('feed/notifications/',views.notifications),
-    path('', views.welcome),
-    path('signin/',views.signin),
-    path('signout/',views.signout),
-    path('signup/',views.signup),
+    path('', views.home),
     path('advices/',views.advices),
-    path('reminders/',views.reminders),
-    path('dues/',views.dues),
     path('notifications/advices/',views.advices),
-    path('notifications/reminders/',views.reminders),
-    path('notifications/dues/',views.dues),
-    path('notifications/reminders/add_Reminder/',views.add_Reminder),
     path('feed/notifications/advices', views.advices),
-    path('feed/notifications/reminders', views.reminders),
-    path('feed/notifications/dues', views.dues),
     path('feed/notifications/add_Reminder', views.add_Reminder),
     path('feed/notifications/see_Reminder', views.see_Reminder),
     path('feed/notifications/reminders/add_Reminder', views.add_Reminder),
     path('feed/notifications/reminders/see_Reminder', views.see_Reminder),
     path('home/feed/notifications/advices', views.advices),
-    path('home/feed/notifications/reminders', views.reminders),
-    path('home/feed/notifications/dues', views.dues),
-    path('home/feed/notifications/reminders/add_Reminder', views.add_Reminder),
-    path('home/feed/notifications/reminders/see_Reminder', views.see_Reminder),
-    path('add_Reminder/', views.add_Reminder),
-    path('see_Reminder/', views.see_Reminder),
+    path('movements/', views.movements),
+    path('reports/',views.reports),
+    path('goals/', views.goal_view, name = 'goal'),
+    path('registergoals/', views.registergoals),
+    path('goals/deletegoal/<codigo>', views.deletegoal),
+    path('goals/editgoal/<codigo>', views.editgoal),
+    path('editargoal/<codigo>', views.editargoal),
+    path('dues/', views.due_view, name = 'due'),
+    path('registerdues/', views.registerdues),
+    path('dues/deletedue/<codigo>', views.deletedue),
+    path('dues/editdue/<codigo>', views.editdue),
+    path('editardue/<codigo>', views.editardue),
+    path('reminders/', views.reminder_view, name = 'reminder'),
+    path('registerreminders/', views.registerreminders),
+    path('reminders/deletereminder/<codigo>', views.deletereminder),
+    path('reminders/editreminder/<codigo>', views.editreminder),
+    path('editarreminder/<codigo>', views.editarreminder),
+    path('admin/', admin.site.urls),
+    path('signin/',views.signin, name='signin'),
+    path('signout/',views.signout, name='signout'),
+    path('signup/',views.signup, name='signup'),
+    path('getadvice/',views.getadvice),
 ]   
 
 
